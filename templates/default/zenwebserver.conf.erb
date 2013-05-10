@@ -1,0 +1,37 @@
+# "zenwebserver reload" for changes to take effect
+
+# Port to accept http request
+httpPort 8080
+
+# Should SSL config be used. Set to 'True' to enable.
+# Will need to setuid on nginx to access privileged port.
+# The readlink in the command will get the correct path
+# to the nginx binary since it is a symlink.
+#   sudo chown root:zenoss `readlink $ZENHOME/bin/nginx`
+#   sudo chmod 04750 `readlink $ZENHOME/bin/nginx`
+useSSL False
+
+# Port to use if useSSL is set
+# sslPort 443
+
+# Path to ssl certificate if useSSL is set
+# sslCert /opt/zenoss/etc/ssl/zenoss.crt
+
+# Path to ssl key if useSSL is set
+# sslKey /opt/zenoss/etc/ssl/zenoss.key
+
+# Number of woker_processes for nginx to use
+#worker_processes 4
+
+# Paths for nginx var directories
+#proxy_cache_path  /opt/zenoss/var/nginx/cache
+#proxy_temp_path /opt/zenoss/var/nginx/tmp/proxy
+#client_body_temp_path /opt/zenoss/var/nginx/tmp/client_body
+
+# Custom includes
+#customHttpInclude /opt/zenoss/etc/nginx-custom-http-*.conf
+#customServerInclude /opt/zenoss/etc/nginx-custom-server-*.conf
+
+# Default error log level
+#error_log_level warn
+

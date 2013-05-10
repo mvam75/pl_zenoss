@@ -1,0 +1,414 @@
+#
+# Configuration file for zentune
+#
+#  To enable a particular option, uncomment the desired entry.
+#
+# Parameter     Setting
+# ---------     -------
+#
+# Use an alternate configuration file
+#configfile /opt/zenoss/etc/zentune.conf
+#
+# Generate an XML file containing command-line
+#  switches., default: False
+#genxmlconfigs False
+#
+# User to become when running default:zenoss,
+#  default: zenoss
+#uid zenoss
+#
+# Cycle continuously on cycleInterval
+#  from Zope, default: False
+#cycle False
+#
+# Launch into the background, default: False
+#daemon False
+#
+# Log to console and log file, default: False
+#duallog False
+#
+# output log info in HTML table format,
+#  default: False
+#weblog False
+#
+# Run under a supervisor which will restart
+#  it, default: False
+#watchdog False
+#
+# The path to the watchdog reporting socket
+#watchdogPath None
+#
+# Wait seconds for initial heartbeat
+#starttimeout None
+#
+# Set listener socket options.For option
+#  details: man 7 socket, default: []
+#socketOption []
+#
+# Logging severity threshold, default: 20
+#logseverity 20
+#
+# Override the default logging path
+#logpath None
+#
+# Max size of log file in KB; default
+#  10240, default: 10240
+#maxlogsize 10240
+#
+# Max number of back up log files; default
+#  3, default: 3
+#maxbackuplogs 3
+#
+# Running on 'master', a remote 'hub',
+#  or remote 'collector' [default: %default],
+#  default: master
+#location master
+#
+# Interval for sending heartbeat events
+#  (in seconds) [default: %default], default:
+#  300
+#heartbeat-interval 300
+#
+# Period of time from last heartbeat before
+#  posting a heartbeat failure event [default:
+#  %default], default: 900
+#heartbeat-timeout 900
+#
+# Offset (in minutes) from midnight of
+#  the (first) call to the daily tuning
+#  task [default: %default], default: 0
+#tune-offset 0
+#
+# Interval between tuning checks (in minutes).
+#   A value of 0 is the same as 24 hours
+#  [default: %default], default: 0
+#tune-interval 0
+#
+# Send events rather than printing a report
+#  when executing 'zentune run' without
+#  the '-c' option, default: False
+#events False
+#
+# Set the amount of memory available on
+#  the server running the ZODB database
+#  server.  Required when the database
+#  server is running on a remote server.
+#mysqltuner-zodb-forcemem None
+#
+# Set the amount of memory available on
+#  the server running the ZEP database
+#  server.  Required when the database
+#  server is running on a remote server.
+#mysqltuner-zep-forcemem None
+#
+# Issue a ERROR severity Tuning event
+#  if the number of configured cache servers
+#  is below this value (default: %default),
+#  default: 1
+#globalconf-num-cacheservers-bad 1
+#
+# Issue a ERROR severity Tuning event
+#  if difference between the python check
+#  interval and the benchmark exceeds
+#  this value (default: %default), default: 100
+#zope-python-check-interval-bad 100
+#
+# The number of benchmark runs to perform
+#  when measuring the variance from the
+#  python check interval. More runs will
+#  increase the time taken and the stability
+#  of this recommendation., default: 3
+#zope-benchmark-runs 3
+#
+# The arbitrary scale factor to convert
+#  a benchmark result into an approximate
+#  python check interval, default: 0.02
+#zope-benchmark-scaling-factor 0.02
+#
+# Issue a ERROR severity Tuning event
+#  if the Zope cache size as a percentage
+#  of the global catalog size is below
+#  this value (default: %default), default: 100
+#zope-cache-size-percentage-bad 100
+#
+# Issue a WARN severity Tuning event if
+#  the Zope cache size as a percentage
+#  of the global catalog size is below
+#  this value (default: %default), default: 130
+#zope-cache-size-percentage-warn 130
+#
+# the average size of an object in the
+#  Zope object cache, default: 32
+#zope-cache-size-avg-object-size-bytes 32
+#
+# the average size of an object in the
+#  Zope object cache, default: 5000
+#zope-cache-size-expected-with-catalog 5000
+#
+# Issue a ERROR severity Tuning event
+#  if the storage cache-local-mb size
+#  as a percentage of the global catalog
+#  size is below this value (default:
+#  %default), default: 100
+#zope-relstorage-cache-size-percentage-bad 100
+#
+# Recommended relstorage cache size per
+#  100K objects, in MB, default: 512
+#zope-relstorage-cache-size-mb-per-100k 512
+#
+# Issue a ERROR severity Tuning event
+#  if the Zope pool size exceeds this
+#  value (default: %default), default: 10
+#zope-pool-size-bad 10
+#
+# Issue a ERROR severity Tuning event
+#  if the Zope maximum-number-of-session-objects
+#  setting is below this value (default:
+#  %default), default: 100000
+#zope-max-sessions-bad 100000
+#
+# Issue a ERROR severity Tuning event
+#  if the Zope maximum-number-of-session-objects
+#  setting when persistent sessions are
+#  enabled is below this value (default:
+#  %default), default: 100000
+#zope-max-persistent-sessions-bad 100000
+#
+# Issue a ERROR severity Tuning event
+#  if the number of threads per Zope instance
+#  exceeds this value (default: %default),
+#  default: 5
+#zope-threads-per-zope-bad 5
+#
+# Issue a WARN severity Tuning event if
+#  Zope latency exceeds this value (default:
+#  %default), default: 1.0
+#zope-latency-low-enough 1.0
+#
+# Issue a WARN severity Tuning event if
+#  this percentile of the Zope latency
+#  exceeds the low-enough latency value
+#  (default: %default), default: 95.0
+#zope-latency-percentile-test 95.0
+#
+# Issue a WARN severity Tuning event if
+#  Zope latency exceeds the low-enough
+#  latency value and there are already
+#  this many zopectl daemons or more (default:
+#  %default), default: 20
+#zope-count-max-recommended 20
+#
+# Issue a WARN severity Tuning event if
+#  the number of cores not saturated with
+#  high-consumption tasks is below this
+#  value (default: %default), default: 2
+#resources-available-cores-warn 2
+#
+# Issue a ERROR severity Tuning event
+#  if the number of cores not saturated
+#  with high-consumption tasks is below
+#  this value (default: %default), default: 1
+#resources-available-cores-bad 1
+#
+# Issue a CLEAR severity Tuning event
+#  if the maximum number of items in the
+#  zenhub work queue is below this value
+#  (default: %default), default: 1000
+#zenhub-max-ok-worklist-length 1000
+#
+# Minimum recommendable interval on which
+#  to process the queue, default: 100
+#zep-queue-length-interval-floor 100
+#
+# Minimum recommendable interval on which
+#  to age or archive events, default: 1000
+#zep-eligible-event-count-interval-floor 1000
+#
+# Minimum recommendable number of events
+#  to process per transaction, default: 1000
+#zep-min-limit 1000
+#
+# Maximum recommendable number of events
+#  to process per transaction, default: 5000
+#zep-max-limit 5000
+#
+# Issue a ERROR severity Tuning event
+#  if the installed MySQL version is below
+#  this value (default: %default), default:
+#  5.5.25a
+#mysql-recommended-version 5.5.25a
+#
+# Issue a ERROR severity Tuning event
+#  if the installed RabbitMQ version is
+#  below this value (default: %default),
+#  default: 2.8.6
+#rabbitmq-recommended-version 2.8.6
+#
+# Issue a ERROR severity Tuning event
+#  if the I/O wait time for a device exceeds
+#  this value (default: %default), default:
+#  50.0
+#iostat-wait-threshold 50.0
+#
+# Issue a WARN severity Tuning event if
+#  cache utilization exceeds this value
+#  (default: %default), default: 90
+#memcache-size-high-warn 90
+#
+# Issue a ERROR severity Tuning event
+#  if cache utilization exceeds this value
+#  (default: %default), default: 95
+#memcache-size-high-bad 95
+#
+# Issue a WARN severity Tuning event if
+#  the cache eviction rate exceeds this
+#  value (default: %default), default: 5
+#memcache-size-evictions-warn 5
+#
+# Issue a ERROR severity Tuning event
+#  if the cache eviction rate exceeds
+#  this value (default: %default), default: 10
+#memcache-size-evictions-bad 10
+#
+# Will send a test event once every {testeventinterval}
+#  minutes to make sure that there are
+#  no errors in the event processing system.
+#  , default: False
+#testevent-enable False
+#
+# How often (in seconds) we want to send
+#  a test event to check  the event system
+#  health., default: 300
+#testevent-interval 300
+#
+# How much time (in seconds) to give the
+#  test event before it is flagged as
+#  unsuccessful.  If flagged unsuccessful
+#  an email will be sent to the {testeventemail}
+#  addresses noting the failure., default: 900
+#testevent-timeout 900
+#
+# If we have an event that doesnt respond
+#  in {testeventtimeout} minutes then
+#  send a warning email to this address.Can
+#  be multiple email addresses separated
+#  by a comma
+#testevent-email None
+#
+# Issue a ERROR severity Tuning event
+#  if the zeneventd object cache size
+#  as a percentage of the global catalog
+#  size is below this value (default:
+#  %default), default: 80
+#zeneventd-obj-cache-bad 80
+#
+# Issue a WARN severity Tuning event if
+#  the zeneventd object cache size as
+#  a percentage of the global catalog
+#  size is below this value (default:
+#  %default), default: 100
+#zeneventd-obj-cache-warn 100
+#
+# The number events in the raw events
+#  queue that will result in recommending
+#  another zeneventd worker., default: 100
+#zeneventd-worker-queued-events-per-worker 100
+#
+# Issue a WARN severity Tuning event if
+#  the existing zeneventd workers cannot
+#  handle the peak event rate and there
+#  are already this many workers or more
+#  (default: %default), default: 20
+#zeneventd-worker-count-max-recommended 20
+#
+# Host of zenhub daemon [default: %default],
+#  default: localhost
+#hubhost localhost
+#
+# Port zenhub listens on [default: %default],
+#  default: 8789
+#hubport 8789
+#
+# Username for zenhub login [default:
+#  %default], default: admin
+#hubusername admin
+#
+# Password for zenhub login [default:
+#  %default], default: zenoss
+#hubpassword zenoss
+#
+# Name of monitor instance to use for
+#  configuration [default: %default],
+#  default: localhost
+#monitor localhost
+#
+# Initial time to wait for a ZenHub connection
+#  (in seconds)[default: %default], default: 30
+#initialHubTimeout 30
+#
+# Send clear events even when the most
+#  recent event was also a clear event
+#  [default: %default], default: False
+#allowduplicateclears False
+#
+# root object for data load (i.e. /zport/dmd),
+#  default: /zport/dmd
+#zodb-dataroot /zport/dmd
+#
+# in memory cachesize default: 1000, default:
+#  1000
+#zodb-cachesize 1000
+#
+# hostname of the MySQL server for ZODB,
+#  default: localhost
+#zodb-host localhost
+#
+# port of the MySQL server for ZODB, default:
+#  13306
+#zodb-port 13306
+#
+# user of the MySQL server for ZODB, default:
+#  zenoss
+#zodb-user zenoss
+#
+# password of the MySQL server for ZODB,
+#  default: zenoss
+#zodb-password zenoss
+#
+# Name of database for MySQL object store,
+#  default: zodb
+#zodb-db zodb
+#
+# Name of socket file for MySQL server
+#  connection if host is localhost, default:
+#  /var/lib/zends/zends.sock
+#zodb-socket /var/lib/zends/zends.sock
+#
+# memcached servers to use for object
+#  cache (eg. 127.0.0.1:11211), default:
+#  127.0.0.1:11211
+#zodb-cacheservers 127.0.0.1:11211
+#
+# Defer polling the database for the specified
+#  maximum time interval, in seconds.
+#  This will default to 60 only if --zodb-cacheservers
+#  is set.
+#zodb-poll-interval None
+#
+# Seconds between attempts to flush events
+#  to ZenHub [default: %default], default: 5.0
+#eventflushseconds 5.0
+#
+# Number of events to send to ZenHub at
+#  one time [default: %default], default: 50
+#eventflushchunksize 50
+#
+# Maximum number of events to queue [default:
+#  %default], default: 5000
+#maxqueuelen 5000
+#
+hubhost localhost
+monitor localhost
+logpath /opt/zenoss/log/localhost
+hubpassword zenoss
+hubport 8789

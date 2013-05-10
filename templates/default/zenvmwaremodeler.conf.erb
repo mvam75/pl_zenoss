@@ -1,0 +1,164 @@
+#
+# Configuration file for zenvmwaremodeler
+#
+#  To enable a particular option, uncomment the desired entry.
+#
+# Parameter     Setting
+# ---------     -------
+#
+# Host of zenhub daemon. Default is localhost.,
+#  default: localhost
+#hubhost localhost
+#
+# Port zenhub listens on.Default is 8789.,
+#  default: 8789
+#hubport 8789
+#
+# Username for zenhub login. Default is
+#  admin., default: admin
+#hubusername admin
+#
+# Password for zenhub login. Default is
+#  zenoss., default: zenoss
+#hubpassword zenoss
+#
+# Name of monitor instance to use for
+#  configuration.  Default is localhost.,
+#  default: localhost
+#monitor localhost
+#
+# Initial time to wait for a ZenHub connection,
+#  default: 30
+#initialHubTimeout 30
+#
+# Send clear events even when the most
+#  recent event was also a clear event.,
+#  default: False
+#allowduplicateclears False
+#
+# Send a clear event every [DUPLICATECLEARINTEVAL]
+#  events., default: 0
+#duplicateclearinterval 0
+#
+# Seconds between attempts to flush events
+#  to ZenHub., default: 5.0
+#eventflushseconds 5.0
+#
+# Number of events to send to ZenHubat
+#  one time, default: 50
+#eventflushchunksize 50
+#
+# Maximum number of events to queue, default:
+#  5000
+#maxqueuelen 5000
+#
+# How often to ping zenhub, default: 30
+#zenhubpinginterval 30
+#
+# Disable event de-duplication, default: True
+#disable-event-deduplication True
+#
+# Use an alternate configuration file
+#configfile /opt/zenoss/etc/zenvmwaremodeler.conf
+#
+# Generate an XML file containing command-line
+#  switches., default: False
+#genxmlconfigs False
+#
+# User to become when running default:zenoss,
+#  default: zenoss
+#uid zenoss
+#
+# Cycle continuously on cycleInterval
+#  from Zope, default: False
+#cycle False
+#
+# Launch into the background, default: False
+#daemon False
+#
+# Log to console and log file, default: False
+#duallog False
+#
+# output log info in HTML table format,
+#  default: False
+#weblog False
+#
+# Run under a supervisor which will restart
+#  it, default: False
+#watchdog False
+#
+# The path to the watchdog reporting socket
+#watchdogPath None
+#
+# Wait seconds for initial heartbeat
+#starttimeout None
+#
+# Set listener socket options.For option
+#  details: man 7 socket, default: []
+#socketOption []
+#
+# single VirtualCenter/ESX server to collect
+#  from
+#endpoint None
+#
+# single ESX server to remodel (or comma-separated
+#  list)
+#device None
+#
+# vmware reference of single ESX server
+#  to remodel (or comma-separated list).
+#  Endpoint must also be specified
+#ref None
+#
+# turn on additional debugging, default: False
+#debug False
+#
+# Period between modeling in minutes,
+#  default: 240
+#configCycleInterval 240
+#
+# Show all http interactions
+#showHttp None
+#
+# Skip loading perf counter maps
+#skipCounters None
+#
+# Number of VMs to request at a time.,
+#  default: 25
+#vmChunkSize 25
+#
+# Number of Hosts to request at a time,
+#  default: 1
+#hostChunkSize 1
+#
+# Number of Resource Pools to request
+#  at a time, default: 25
+#resourcepoolChunkSize 25
+#
+# Number of Clusters to request at a time,
+#  default: 25
+#clusterChunkSize 25
+#
+# Number of Datastores to request at a
+#  time, default: 25
+#datastoreChunkSize 25
+#
+# Logging severity threshold, default: 20
+#logseverity 20
+#
+# Override the default logging path
+#logpath None
+#
+# Max size of log file in KB; default
+#  10240, default: 10240
+#maxlogsize 10240
+#
+# Max number of back up log files; default
+#  3, default: 3
+#maxbackuplogs 3
+#
+hubhost localhost
+monitor localhost
+logpath /opt/zenoss/log/localhost
+hubpassword zenoss
+hubport 8789

@@ -1,0 +1,5 @@
+for h in dmd.Monitors.Hub.getHubs():
+      print "Hub " + h.id
+      for c in h.collectors():
+            print "    Collector " + c.id
+            print "        Devices " + str(len(c.getDevices()))
